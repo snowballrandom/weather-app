@@ -22,12 +22,12 @@ const darksky = {
         
         if(error){
 
-            output.response.error = true;
-            output.response.error_msg = {
+            darksky.res.error = true;
+            darksky.res.error_msg = {
                 default: 'Something went wrong!'+"\n",
                 response_error: error    
             };
-          
+            
             callback(darksky.res);
 
         }else{
